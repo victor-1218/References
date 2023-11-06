@@ -2,15 +2,14 @@ Hello everyone, my fullname is Nguyen Minh Duc, my English name is Victor.
 Iam an intership at the NPI1 department, on AA process and my mentor is Mr.Louis.
 Today, i will show u about my final presentation.
 
-I will divide the presentation into 4 parts are:
+I divide the presentation into 4 parts are:
 - Part 1: Camera module introduction
 - Part 2: Active align process
-- Part 3: CTQ Test
-- Part 4: Build plan & ERS
+- Part 3: Measurements
 
 The first is about camera module introduction.
-Camera module is contructed from some components like VCM, Lens, IRCF, Substrate,
-sensor, FPCB and stiffener. Cameras are often used in many fields, including some 
+A camera module is contructed from some components like VCM, Lens, IRCF, Substrate,
+sensor, FPCB and stiffener. It is often used in many fields, including some 
 familiar products like Iphone, PC and Tablet. So how to product a camera module ?
 
 In our company, the production process is divided into 2 main section: FOL and EOL.
@@ -19,6 +18,7 @@ Both FOL and EOL involve many steps but here I will outline the main steps.
 FOL is standfor front of line, includes 6 main steps as u can see.
 - Stud Bump: Creating a Gold bump by using ultrasonic 
 	    waves to cut and attach the bump to the Sensor's Bond Pad
+						 (power contact pin)
 - Flip Chip: Using ultrasonic waves on the HTCC to attach the sensor
 - Underfill: Coating the back of the Sensor 
 	    with epoxy glue that has been mounted on the HTCC
@@ -48,14 +48,15 @@ Active align step is the step where iam working on.
 
 In part 2, i will tell you more details about AA process.	
 
-Slide 8: structure of AA machine
+Slide 8: this is structure of AA machine
  2 inputs: HTCC and VCM; 
  2 outputs: product and NG product
  index table
- 4 station: chart, gripper, socket, collimator, OC lamp, UV Led, bufer
+ 4 station including: chart, gripper, socket, collimator, OC lamp, UV Led, bufer
 
 
 Slide 9: AA stage-connection: 
+ There are 2 signal transmission lines from HTCC and VCM
  - if one part relating connection of HTCC lost, CCD error-cannot diplay image
 	=> replace hardware or offset software to fix
  - if one part relating connection of VCM lost, cannot adjust lens moving and
@@ -98,6 +99,7 @@ Slide 11: AA stage-sequence: some items can be changed:
 - UV: to temporarily dry the glue
 
 slide 12: 
+ Epoxy pattern is built from 16 points, this is result of detect step.
  - Disconnection:
 	Reason: air in the glue bottle
 	Affect: dust can penetrate inside HTCC
@@ -111,6 +113,7 @@ slide 12:
 	     adjust offset x, y dimensions
 
 slide 14: dispensing test
+ It has two items to check
  - Height:
 	Factor affecting: the height between HTCC and glue nozzle
 	Affect: too much, overflow => affects components and solder pins
@@ -120,14 +123,14 @@ slide 14: dispensing test
 	Affect: too much, overflow => affects components and solder pins
 		too less, risk of causing disconnection
 
-slide 15: rotation
+slide 15: rotation-Check the deviation between HTCC and VCM
  	Factor affecting: chart - compare image from chart and sensor
- 	Reason: - Chart was rotated when set up hardware
+ 	Reason: Chart was rotated when set up hardware
  	Fix: difference between A and B is more than 0.5, adjust chart 
              otherwise, adjust offset to rotate the VCM in the opposite 
 	     direction to compensate for the deviation of the chart
 
-slide 16: OC
+slide 16: OC-check optical center
 	Factor affecting: chart
  	Reason: - Chart was tilted when set up hardware
  	Fix: adjust chart 
@@ -162,9 +165,14 @@ slide 19: shear
  	Factor affecting: 
 		- Time
 		- Temperature (oven); Luminance (UV)
- 	Reason: - Chart was tilted during installation
- 	Fix: adjust chart 
-             adjust offset of OC light
+ 	Reason: - it is not enough time or temperature (luminance)
+		- epoxy line is tô small 
+ 	Fix: adjust time and temperature (oven)
+	     adjust time and luminance (UV)
+	     adjust dispensing
+
+Above is what I learned during 3 months of internship at LG. 
+During study, I was 
 
 Question:
 1. Slide 12, why do point 15, 16 take no pressure?
