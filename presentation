@@ -46,49 +46,48 @@ the process)
 
 Active align step is the step where iam working on.
 
-In part 2, i will tell you more details about AA process.
+In part 2, i will tell you more details about AA process.	
 
-This is machine A seen from the outside which is one of the biggest machine. 
+Slide 8: structure of AA machine
+ 2 inputs: HTCC and VCM; 
+ 2 outputs: product and NG product
+ index table
+ 4 station: chart, gripper, socket, collimator, OC lamp, UV Led, bufer
 
-There is it's structure that has two inputs (HTCC, VCM), one output, 4 station,
- 3 pick up and 1 NG tray.
 
-About flow process, u can see the graph 
-HTCC input is sent to the index table where include 4 steps:
-- First, HTCC is placed in supply position
-- Second, it moves to blow & suction position
-- Then, it comes to dispenser to be glued epoxy
-- Final, machine check epoxy line inspection.
+Slide 9: AA stage-connection: 
+ - if one part relating connection of HTCC lost, CCD error-cannot diplay image
+	=> replace hardware or offset software to fix
+ - if one part relating connection of VCM lost, cannot adjust lens moving and
+	NVM fail
 
-The loading hand 1's task is to take the HTCC to scan the Barcode 
+Slide 10: flow process
+ HTCC is placed to index table for cleaning and dispensing.
+Then, the loading hand 1 will take the HTCC to scan the Barcode 
 and place it into the socket.
-The loading hand 2's task is to take the VCM to scan the Barcode, 
-  cleaning and place it into the buffer.
-After that, machine performs AA stage to attaching HTCC and VCM. Then product will
+ The loading hand 2 will take the VCM to scan the Barcode, 
+cleaning and place it into the buffer.
+ After that, machine performs AA stage to attaching HTCC and VCM. Then product will
 be UV cured and shipped to ouput magazine by unloading hand. During the AA process
 , if there is a false product, it will be placed in the NG tray.
 The finished product needs to be put into the oven within 2 hours.
 Otherwise, the glue will lose its adhesion and damage the product.
 
-About epoxy dispensing, it includes 4 steps as u can see: 
-- HTCC Vision Align
-- Epoxy Dispensing
-- Inspection
-- Detect pattern disconnection and shift
-The pattern is made up of 16 points which has coordinates and parameters as shown
-in the table. And this is the result of machine after align HTCC to detect 
-disconnect and shift.
-
-About AA stage connections, there are two main connections: from socket and 
-buffer to PC. These hardwares are set up and installed in the AA machine.
-
-Next, AA stage sequence will show more details about active align step: 
-- Inputs move to AA stage
-- Place HTCC into socket and move to AA position
-- VCM Thru-focus 1st: Control the height of the VCM to check the tilt
+Slide 11: AA stage-sequence: some items can be changed: 
+ VCM Z-axis thru-focus; VCM driving thru-focus; UV; 
+ DAC-distance moved each time the z-axis is lowered and movement speed
+ theta-offset: rotation
+ tilt setting limit
+ 
+- Move to AA stage (transfer): status of machine
+- On load HTCC: go to AA position
+- Move to AA position: sensor initializing, image grabbing, VCM initializing
+	VCM carrier move down, AF current check using by MCU board
+- VCM Z-axis down: image capture
+- VCM Thru-focus (1st): Control the height of the VCM to check the tilt
 - Adjust Tilting (Tx, Ty): adjust the height of VCM to tilt compensation
-- Corner & SFR check: test center position and 4 corner to check 
-  the sharpness of the camera (SFR-spatial frequency response).
+- Corner & SFR check: test center position and 4 corner to check
+  	the sharpness of the camera (SFR-spatial frequency response).
 - VCM driving Thru-focus (lens): Control the height of the len to check the tilt
 - Adjust Tilting: adjust the height of lens to tilt compensation
 - Final SFR check: if it is not suitable, product will be come back to step
@@ -97,105 +96,6 @@ Next, AA stage sequence will show more details about active align step:
 - OC 1st: check OC and compenstate
 - OC 2nd: check OC 2nd 
 - UV: to temporarily dry the glue
-
-Come to part 3: CTQ test, i will intro about some measurements
-Dispensing test:
-- The tool: 3D machine
-- There are 2 items to measure: 
-	height: Measure the distance from the glue line to the HTCC surface at 
-		8 points
-	width:  Measure the width of the glue line at 4 locations
-- Method: engineer write a program for each items
-- Measurement results table: result mesure is showed in the table and 
-  If the measured parameters are within spec, the machine settings are 
-  appropriate, otherwise the machine settings need to be changed.
-	
-
-Rotation test:
-- The tool: 3D machine
-- Purpose: evaluate deviation between HTCC and VCM in degrees 
-- Method: Create two straight lines on the edges VCM and HTCC 
-  and measure the angle formed between them
-- Stdev (Standard Deviation): A quantity used to reflect the dispersion 
-  of values in a data set. Shows the variation of value in a period of 
-  time reflecting the trend of change.
-- CPK (Process capability index): reflects the deviation of the process average
-- The less Stdev, the more CPK, the better process capability.
-
-OC test:
-- The tool: OC test machine
-- Check the optical center of product after UV
-- Method: put product into socket and click start button, machine will 
-  automaticly measure
-
-
-BLT test: bonding line thickness
-- The tool: 3D machine
-- Purpose: calculate thickness of glue after attaching HTCC and VCM through
-  VCM Shield Height, HTCC Height and Cube Height. 
-- Calculation formula is as shown in the picture
-
-
-Cosmetic:
-- Check external inspection of the product
-- Some issues: 
-	VCM gap: VCM is not connected to HTCC
-	Epoxy: disconnect, overflow
-	Lens coating:Check the Lens for scratches using a microscope with a 
-	 flash light underneath the Lens
-	VCM Rotation: HTCC protrudes above VCM (measurement by machine is not 100%) 
-	Lens chipping:Check the Barrel for scratches
-- 2 ways to measure: Visually inspect and 3D machine
-
-Shear strength test:
-- The tool: shear machine
-- Measure the force that destroys the glue layer between HTCC and VCM.
-  There are 2 items that need to be measured: after UV and after oven
-- The table show some parameters as u can see 
-
-Final, part 4 is build plan and ERS
-Build plan: 
-- In AA process, there are 3 main points about job of engineer: 
-   Project progress control: follow and update the build plan from PM,
-   Output quality control.
-   Innovation and increase quality of process
-The working process with 1 model is as follows: 
- Set up the AA machine=>Run MBO and complete MBO report
-=>Submit MBO and ACE Approval=>Set up and run main=>PBO report
-
-ERS:
-- The ERS stands for engineering requirements specification, this document is 
-  detail descriptions and obligated parameters which Apple company needs.
-- There are 18 parameters
-- The items tested in part 3 are all based on ERS.
-
-Question:
-1. Slide 12, why do point 15, 16 take no pressure?
-2. SC_South Carolina
-3. After UV treatment, the glue will temporarily harden and maintain for 2 hours
-4. The reason why dividing FOL and EOL is in FOL HTCC and VCM have not been put 
-together yet so the possibility of dust contamination on the camera (IRCF, sensor) 
-during the FOL process is more than EOL. 
-5. Spec OC in AA machine is +-5 (pixel), in OC tester is +-35 (pixel) 
-
-
-
-%NOTE:
-part 1: introduce can be a fast present because everyone know about it
-
-slide 8: structure of AA machine
- 2 inputs: HTCC and VCM; 
- 2 outputs: product and NG product
- index table
- 4 station: chart, gripper, socket, collimator, OC lamp, UV Led, bufer
-
-
-slide 9: AA stage-connection: 
- - if one part relating connection of HTCC lost, CCD error-cannot diplay image
- - if one part relating connection of VCM lost, cannot adjust lens moving
-
-slide 11: AA stage-sequence: some items can be changed: 
- VCM Z-axis thru-focus; VCM driving thru-focus; UV; 
 
 slide 12: 
  - Disconnection:
@@ -213,35 +113,44 @@ slide 12:
 slide 14: dispensing test
  - Height:
 	Factor affecting: the height between HTCC and glue nozzle
+	Affect: too much, overflow => affects components and solder pins
+		too less, risk of causing disconnection
  - Width:
 	Factor affecting: pressure
+	Affect: too much, overflow => affects components and solder pins
+		too less, risk of causing disconnection
 
 slide 15: rotation
  	Factor affecting: chart - compare image from chart and sensor
- 	Reason: - Chart was rotated when installation
+ 	Reason: - Chart was rotated when set up hardware
  	Fix: difference between A and B is more than 0.5, adjust chart 
-             otherwise, adjust offset to to rotate the VCM in the opposite 
+             otherwise, adjust offset to rotate the VCM in the opposite 
 	     direction to compensate for the deviation of the chart
 
 slide 16: OC
 	Factor affecting: chart
- 	Reason: - Chart was tilted during installation
+ 	Reason: - Chart was tilted when set up hardware
  	Fix: adjust chart 
              adjust offset of OC light
 
 slide 17: BLT
 	Factor affecting: Performance of lens and VCM (pre-step) 
- 	Reason: cube height is constant, HTCC height is constant
- 	Fix: adjust Z offset
-             recommend to pre-step
+ 	Reason: cube height is constant, HTCC height is constant 
+		=> VCM height can be changed => change BLT 
+ 	Fix: recommend to pre-step
+	     adjust Z offset
+            
 
 slide 18: cosmetic
  	Factor affecting: chart, gripper, nozzle
- 	Reason: 
-	- VCM gap: do lens bị nghiêng nên VCM phải bù nghiêng nên một bên thấp
-		   một bên cao => bên cao có nguy cơ làm chân terminal không
-	 	   chạm HTCC => fix: đặt spec tilt limit; tilt quá thì NG
-	- Epoxy: dispensing
+ 	Reason:	
+	- VCM gap: Because the lens is tilted, the VCM must compensate for 
+		   the tilt, so one side is low and the other is high 
+		   => the high side has the risk of causing the terminal pin 
+		   not to touch the HTCC 
+		   => fix: set spec tilt limit; 
+			   if it tilts too much, it's NG
+	- Epoxy: dispensing (disconnect, shift)
 	- Lens coating: gripper
 	- Rotation: chart
 	- Chipping: gripper
@@ -256,3 +165,19 @@ slide 19: shear
  	Reason: - Chart was tilted during installation
  	Fix: adjust chart 
              adjust offset of OC light
+
+Question:
+1. Slide 12, why do point 15, 16 take no pressure?
+2. SC_South Carolina
+3. After UV treatment, the glue will temporarily harden and maintain for 2 hours
+4. The reason why dividing FOL and EOL is in FOL HTCC and VCM have not been put 
+together yet so the possibility of dust contamination on the camera (IRCF, sensor) 
+during the FOL process is more than EOL. 
+5. Spec OC in AA machine is +-5 (pixel), in OC tester is +-35 (pixel) 
+
+
+
+
+
+
+
