@@ -2,13 +2,13 @@ Hello everyone, my fullname is Nguyen Minh Duc, my English name is Victor.
 Iam an intership at the NPI1 department, on AA process and my mentor is Mr.Louis.
 Today, i will show u about my final presentation.
 
-I divide the presentation into 4 parts are:
+I divide the presentation into 3 parts are:
 - Part 1: Camera module introduction
 - Part 2: Active align process
 - Part 3: Measurements
 
 The first is about camera module introduction.
-A camera module is contructed from some components like VCM, Lens, IRCF, Substrate,
+A camera module is constructed from some components like VCM, Lens, IRCF, Substrate,
 sensor, FPCB and stiffener. It is often used in many fields, including some 
 familiar products like Iphone, PC and Tablet. So how to product a camera module ?
 
@@ -44,7 +44,8 @@ EOL is standfor end of line, also includes 6 main steps.
 (1 presentation has 10-15 minutes so if it doesn't enough time, can fast read
 the process)
 
-Active align step is the step where iam working on.
+Active align step is the step where iam working on. 
+Active align can be abbreviated as AA
 
 In part 2, i will tell you more details about AA process.	
 
@@ -57,16 +58,16 @@ Slide 8: this is structure of AA machine
 
 Slide 9: AA stage-connection: 
  There are 2 signal transmission lines from HTCC and VCM
- - if one part relating connection of HTCC lost, CCD error-cannot diplay image
+ - if one part relating connection of HTCC lost, it causes to 
+   CCD error which means that machine cannot detect image
 	=> replace hardware or offset software to fix
  - if one part relating connection of VCM lost, cannot adjust lens moving and
 	NVM fail
 
 Slide 10: flow process
  HTCC is placed to index table for cleaning and dispensing.
-Then, the loading hand 1 will take the HTCC to scan the Barcode 
-and place it into the socket.
- The loading hand 2 will take the VCM to scan the Barcode, 
+Then, the loading hand will take the HTCC to the socket.
+ The loading hand will take the VCM to scan the Barcode, 
 cleaning and place it into the buffer.
  After that, machine performs AA stage to attaching HTCC and VCM. Then product will
 be UV cured and shipped to ouput magazine by unloading hand. During the AA process
@@ -79,9 +80,10 @@ Slide 11: AA stage-sequence: some items can be changed:
  DAC-distance moved each time the z-axis is lowered and movement speed
  theta-offset: rotation
  tilt setting limit
+ OC offset: Ox, Oy
  
 - Move to AA stage (transfer): status of machine
-- On load HTCC: go to AA position
+- On load HTCC: gload HTCC to AA position
 - Move to AA position: sensor initializing, image grabbing, VCM initializing
 	VCM carrier move down, AF current check using by MCU board
 - VCM Z-axis down: image capture
@@ -95,19 +97,19 @@ Slide 11: AA stage-sequence: some items can be changed:
   VCM driving Thru-focus and be checked again. If it is still NG, it will be 
   moved to NG tray
 - OC 1st: check OC and compenstate
-- OC 2nd: check OC 2nd 
+- OC 2nd: check OC 2nd
 - UV: to temporarily dry the glue
 
 slide 12: 
  Epoxy pattern is built from 16 points, this is result of detect step.
  - Disconnection:
 	Reason: air in the glue bottle
-	Affect: dust can penetrate inside HTCC
+	Affect: dust can intrude internal HTCC
 	Fix: centrifuge to remove air bubbles; 
 	     remove glue for 30-60 seconds before using
  - Shift:
 	Reason: the position of the glue nozzle is misaligned; 
-                the align light is misaligned
+                the align lamp is misaligned
 	Affect: affects components and solder pins
 	Fix: adjust the glue nozzle and the align light
 	     adjust offset x, y dimensions
@@ -134,7 +136,7 @@ slide 16: OC-check optical center
 	Factor affecting: chart
  	Reason: - Chart was tilted when set up hardware
  	Fix: adjust chart 
-             adjust offset of OC light
+             adjust offset of OC-gripper
 
 slide 17: BLT
 	Factor affecting: Performance of lens and VCM (pre-step) 
@@ -166,7 +168,7 @@ slide 19: shear
 		- Time
 		- Temperature (oven); Luminance (UV)
  	Reason: - it is not enough time or temperature (luminance)
-		- epoxy line is tô small 
+		- epoxy line is too small 
  	Fix: adjust time and temperature (oven)
 	     adjust time and luminance (UV)
 	     adjust dispensing
@@ -182,10 +184,7 @@ Question:
 together yet so the possibility of dust contamination on the camera (IRCF, sensor) 
 during the FOL process is more than EOL. 
 5. Spec OC in AA machine is +-5 (pixel), in OC tester is +-35 (pixel) 
-
-
-
-
+6. 
 
 
 
