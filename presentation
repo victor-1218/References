@@ -83,15 +83,20 @@ Slide 11: AA stage-sequence: some items can be changed:
  OC offset: Ox, Oy
  
 - Move to AA stage (transfer): status of machine
-- On load HTCC: gload HTCC to AA position
+- On load HTCC: load HTCC to AA position
 - Move to AA position: sensor initializing, image grabbing, VCM initializing
 	VCM carrier move down, AF current check using by MCU board
 - VCM Z-axis down: image capture
 - VCM Thru-focus (1st): Control the height of the VCM to check the tilt
+	Begin lens is at nature position; 
+	Thru-focus: lens downs to the bottom hard stop; 
+	Searching Inf. by motor
 - Adjust Tilting (Tx, Ty): adjust the height of VCM to tilt compensation
 - Corner & SFR check: test center position and 4 corner to check
-  	the sharpness of the camera (SFR-spatial frequency response).
+  	the resolution of 5 points in the camera (SFR-spatial frequency response).
 - VCM driving Thru-focus (lens): Control the height of the len to check the tilt
+	Offset VCM by 60um to achieve target BLT of 80um
+	Drive lens up to target NLAZ position; searching Inf. by lens
 - Adjust Tilting: adjust the height of lens to tilt compensation
 - Final SFR check: if it is not suitable, product will be come back to step
   VCM driving Thru-focus and be checked again. If it is still NG, it will be 
@@ -108,8 +113,7 @@ slide 12:
 	Fix: centrifuge to remove air bubbles; 
 	     remove glue for 30-60 seconds before using
  - Shift:
-	Reason: the position of the glue nozzle is misaligned; 
-                the align lamp is misaligned
+	Reason: Misalignment of the position of the glue nozzle or the align light
 	Affect: affects components and solder pins
 	Fix: adjust the glue nozzle and the align light
 	     adjust offset x, y dimensions
@@ -156,9 +160,9 @@ slide 18: cosmetic
 		   => fix: set spec tilt limit; 
 			   if it tilts too much, it's NG
 	- Epoxy: dispensing (disconnect, shift)
-	- Lens coating: gripper
+	- Lens coating: pre-step, dubbing
 	- Rotation: chart
-	- Chipping: gripper
+	- Chipping: gripper, pick-up VCM
  	Fix: adjust gripper height offset
 	     adjust chart
 	      	     
