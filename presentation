@@ -118,6 +118,7 @@ slide 12:
 	Fix: adjust the glue nozzle and the align light
 	     adjust offset x, y dimensions
 
+In MBO, there are numerous items, but I'll mention some of the aspects that I have been involved in implementing
 slide 14: dispensing test
  It has two items to check
  - Height:
@@ -177,8 +178,9 @@ slide 19: shear
 	     adjust time and luminance (UV)
 	     adjust dispensing
 
-Above is what I learned during 3 months of internship at LG. 
-During study, I was 
+I would like to express my gratitude to Mr. A for giving me the opportunity to intern at our company. 
+Thanks to everyone in the path, especially Mr. Louis, for assisting me during the internship.
+Thank you so much.
 
 Question:
 1. Slide 12, why do point 15, 16 take no pressure?
