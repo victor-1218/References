@@ -1,4 +1,6 @@
-5963	VH004340	Phạm Văn Hoàn	5/6/2019	Process Engineering Department	Process Engineering Department	Process Engineering Team 2	G	Senior Engineer	G2	HC	HC	HC	HC1	  	  	HC	HC	HC	HC	HC1	  	  	HC	HC	HC	HC	HC1	  	  	0.05L-HC	HC	HC	HC	HC1	  	  	R	HC	HC	22	 21.0 	 -   	 1.0 	0.00	0.00	37.50	7.33	36.50	1.50	0.00	0.00	0.00	0.05	21.33		G2
+T9	VH004340	Phạm Văn Hoàn	5/6/2019	Process Engineering Department	Process Engineering Department	Process Engineering Team 2	G	Senior Engineer	G2	  	  	1.75L-HC	HC	HC	HC	HC1	  	  	HC	HC	HC	2.233E-HC	 	 	  	  	HC	HC	HC	HC1	  	  	HC	HC	1.417L-HC	HC	HC1	  	  	HC	19	 19.0 	 -   	 -   	0.00	0.00	32.33	1.00	25.00	1.50	0.00	0.00	0.00	5.40	9.00		G2
+
+T10	VH004340	Phạm Văn Hoàn	5/6/2019	Process Engineering Department	Process Engineering Department	Process Engineering Team 2	G	Senior Engineer	G2	HC	HC	HC	HC1	  	  	HC	HC	HC	HC	HC1	  	  	HC	HC	HC	HC	HC1	  	  	0.05L-HC	HC	HC	HC	HC1	  	  	R	HC	HC	22	 21.0 	 -   	 1.0 	0.00	0.00	37.50	7.33	36.50	1.50	0.00	0.00	0.00	0.05	21.33		G2
 
 
 Hello everyone, my fullname is Nguyen Minh Duc, my English name is Victor.
@@ -194,7 +196,8 @@ together yet so the possibility of dust contamination on the camera (IRCF, senso
 during the FOL process is more than EOL. 
 5. Spec OC in AA machine is +-5 (pixel), in OC tester is +-35 (pixel) 
 6. 
+T09	VH013874	Nguyễn Thị Minh Huyền	5/29/2023	Process Engineering Department	Process Engineering Department	Process Engineering Team 2	G	Assistant	A1	  	  	HC	HC	HC	HC	HC1	  	  	HC	HC	HC	HC	 	 	  	  	HC	ANL	HC	HC1	  	  	HC	HC	ANL	HC	HC1	  	  	HC	17.0 	 2.0(nghi) 	 -   	8.00(thuong)	0.00(dem)	35.00(T7)	8.00(lễ)	A1
 
-6008	VH013874	Nguyễn Thị Minh Huyền	5/29/2023	Process Engineering Department	Process Engineering Department	Process Engineering Team 2	G	Assistant	A1	HC	HC	HC	HC1	  	  	HC	HC	ANL	HC	HC1	  	  	HC	HC	ANL	HC	HC1	  	  	HC	HC	ANL	HC	HC1	  	  	HC	HC	ANL	 18.0 	 4.0(nghỉ) 	 -   	12.17	33.50	A1
+T10	VH013874	Nguyễn Thị Minh Huyền	5/29/2023	Process Engineering Department	Process Engineering Department	Process Engineering Team 2	G	Assistant	A1	HC	HC	HC	HC1	  	  	HC	HC	ANL	HC	HC1	  	  	HC	HC	ANL	HC	HC1	  	  	HC	HC	ANL	HC	HC1	  	  	HC	HC	ANL	 18.0 	 4.0(nghỉ) 	 -   	12.17	33.50	A1
 
 
