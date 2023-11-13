@@ -1,1 +1,7 @@
 https://www.sciencedirect.com/science/article/abs/pii/S0888327018308410
+
+Về bài báo A Time Optimal Trajectory Planning Method for Overhead Cranes with Obstacle Avoidance:
+- Tổng quan: đưa ra giải pháp để xử lý tình huống khi trong quá trình cầu trục hoạt động thì có vật cản xuất hiện
+=> Giải bài toán tìm thời gian tối ưu T để vượt quá chướng ngại vật với thời gian ngắn nhất và góc dao động của tải là nhỏ nhất
+
+- Bài toán được tính toán trước khi chạy thực nghiệm
